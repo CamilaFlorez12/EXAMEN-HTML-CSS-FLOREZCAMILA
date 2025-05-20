@@ -148,6 +148,18 @@ a{
     grid-area: info;
     padding: 10vh;
 }
+.info-map{
+    display: flex;
+    align-items: center;
+    line-height: 10vh;
+}
+a:hover{
+    transform: translateY(10px);
+    scale: (1.1);
+}
+a{
+    transition:transform 1s cubic-bezier(0,1,0,1) ;
+}
 @media(max-width:800px){
     .navegador,.name{
         grid-area: navegador;
@@ -168,6 +180,7 @@ a{
     .navegador1{
         grid-area: navegador;
         margin-left: 0;
+        margin-top: 4vh;
     }
     .robot{
             display: grid;
@@ -178,7 +191,8 @@ a{
                                 "info3";
             justify-content: space-between;
             gap: 5vh;
-            padding: 10vh;
+            padding: 1vh;
+        
         }
         .contenedor{
             display: grid;
@@ -187,5 +201,58 @@ a{
             grid-template-areas: "imagen "
             "imagen2";
         }
+        .footer{
+            font-size: 1rem;
+        }
+        .img-pag1{
+            height: 100%;
+        }
+        .division{
+    grid-area:imagen;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "imagen titulo"
+                        "imagen titulo2";  
+    padding: 0;
+    margin: 20px;
+}
+    .mision,.vision{
+        grid-area: imagen;
+        width: 80%;
+        justify-content: center;
+    }
+    .division2{
+    grid-area: imagen2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "titulo imagen"
+                        "titulo2 imagen";
+    padding: 0;
+    margin:20px
+}
+
+    .titulo-mision,.titulo-vision{
+        grid-area: titulo;
+        display: flex;
+        justify-content: center;
+    }
+
+    .division p,.division2 p{
+        font-size: 0.6rem;
+        text-align: justify;
+    }
+    .contenedor2{
+    display: flex;
+    flex-direction: column;
+}
+    .mapa img{
+    padding: 0vh;
+}
+    .info{
+    grid-area: info;
+    padding: 5vh;
+}
     }
 
